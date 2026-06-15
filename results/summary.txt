@@ -1,0 +1,32 @@
+Generative AI-Based Synthetic Medical Data Generation for Privacy Preservation
+==============================================================================
+
+Run timestamp: 2026-03-15 20:05:02
+Real rows (total/train/test): 2200/1760/440
+Synthetic rows: 1760
+
+UTILITY METRICS
+------------------------------
+Overall utility score: 0.9817
+Continuous similarity: 0.9768
+Categorical similarity: 0.9911
+Correlation similarity: 0.9837
+
+DOWNSTREAM MODEL EFFICACY (Logistic Regression)
+------------------------------
+Train Real -> Test Real: accuracy=0.7636, f1=0.5906, auc=0.789
+Train Synth -> Test Real: accuracy=0.7682, f1=0.582, auc=0.791
+Delta (Synth - Real): accuracy=0.0046, f1=-0.0086, auc=0.002
+
+PRIVACY METRICS
+------------------------------
+Overall privacy score: 0.5275
+Exact match rate: 0.0
+Disclosure risk @ distance<0.06: 0.1688
+NN distance p01/p05/median: 0.0355/0.048/0.0834
+Quasi-identifier uniqueness: 1.0
+
+INTERPRETATION
+------------------------------
+Synthetic data preserves major statistical and predictive patterns while reducing direct linkage risk.
+This supports privacy-preserving data sharing for educational and research-focused data mining workflows.

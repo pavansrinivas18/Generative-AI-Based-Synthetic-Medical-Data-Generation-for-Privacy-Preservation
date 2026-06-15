@@ -1,0 +1,92 @@
+{
+  "run_timestamp": "2026-03-15 20:05:02",
+  "data": {
+    "real_total": 2200,
+    "real_train": 1760,
+    "real_test": 440,
+    "synthetic_total": 1760
+  },
+  "utility": {
+    "per_feature": {
+      "age": {
+        "ks": 0.0148,
+        "similarity": 0.9852
+      },
+      "bmi": {
+        "ks": 0.0233,
+        "similarity": 0.9767
+      },
+      "systolic_bp": {
+        "ks": 0.025,
+        "similarity": 0.975
+      },
+      "diastolic_bp": {
+        "ks": 0.0233,
+        "similarity": 0.9767
+      },
+      "glucose": {
+        "ks": 0.0239,
+        "similarity": 0.9761
+      },
+      "cholesterol": {
+        "ks": 0.029,
+        "similarity": 0.971
+      },
+      "gender": {
+        "similarity": 0.9932
+      },
+      "smoker": {
+        "similarity": 0.9835
+      },
+      "family_history": {
+        "similarity": 0.9983
+      },
+      "exercise_level": {
+        "similarity": 0.9875
+      },
+      "alcohol_use": {
+        "similarity": 0.9932
+      }
+    },
+    "continuous_similarity": 0.9768,
+    "categorical_similarity": 0.9911,
+    "correlation_similarity": 0.9837,
+    "overall_utility_score": 0.9817
+  },
+  "downstream": {
+    "train_real_test_real": {
+      "accuracy": 0.7636,
+      "precision": 0.6944,
+      "recall": 0.5137,
+      "f1": 0.5906,
+      "auc": 0.789
+    },
+    "train_synth_test_real": {
+      "accuracy": 0.7682,
+      "precision": 0.7245,
+      "recall": 0.4863,
+      "f1": 0.582,
+      "auc": 0.791
+    },
+    "delta_synth_minus_real": {
+      "accuracy": 0.0046,
+      "precision": 0.0301,
+      "recall": -0.0274,
+      "f1": -0.0086,
+      "auc": 0.002
+    }
+  },
+  "privacy": {
+    "exact_match_rate": 0.0,
+    "nearest_neighbor_distance_p01": 0.0355,
+    "nearest_neighbor_distance_p05": 0.048,
+    "nearest_neighbor_distance_median": 0.0834,
+    "disclosure_risk_at_0_06": 0.1688,
+    "quasi_identifier_uniqueness": 1.0,
+    "overall_privacy_score": 0.5275
+  },
+  "model": {
+    "name": "Class-Conditional Gaussian Copula",
+    "notes": "Pure Python implementation with separate per-class distributions."
+  }
+}
